@@ -11,7 +11,7 @@ const userRoutes = require('./routes/auth')
 // Example for an Express.js backend
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://dyna2-api.vercel.app/', // or your frontend URL
+  origin: 'https://airdyna-client2.vercel.app/', // or your frontend URL
   credentials: true,
 })) 
 
@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
 //routes
 app.use(express.json())
 app.use(cors({
-    origin:["https://dyna2-api.vercel.app/"],
+    origin:["https://airdyna-client2.vercel.app/"],
     methods: ["GET","POST","DELETE","PATCH"],
     credentials:true
 }))
