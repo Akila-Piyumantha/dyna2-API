@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
 //routes
 app.use(express.json())
 app.use(cors({
-    origin:["https://airdyna-client2-6sfybamh9-akila-piyumanthas-projects.vercel.app/"],
+    origin:["https://airdyna-client2-git-master-akila-piyumanthas-projects.vercel.app/"],
     methods: ["GET","POST","DELETE","PATCH"],
     credentials:true
 }))
