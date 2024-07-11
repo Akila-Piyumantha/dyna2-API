@@ -10,10 +10,7 @@ const userRoutes = require('./routes/auth')
 
 // Example for an Express.js backend
 const cors = require('cors');
-app.use(cors({
-  origin: 'https://airdyna-client2-git-master-akila-piyumanthas-projects.vercel.app/', // or your frontend URL
-  credentials: true,
-})) 
+
 
 //middleware
 app.use((req,res,next)=>{
@@ -23,11 +20,15 @@ app.use((req,res,next)=>{
 
 //routes
 app.use(express.json())
+
 app.use(cors({
-    origin:["https://airdyna-client2-git-master-akila-piyumanthas-projects.vercel.app/"],
-    methods: ["GET","POST","DELETE","PATCH"],
-    credentials:true
-}))
+  origin: 'https://airdyna-client2-git-master-akila-piyumanthas-projects.vercel.app/', // or your frontend URL
+  methods: ["GET","POST","DELETE","PATCH"],
+  credentials: true,
+})) 
+
+
+
 app.use('/api/workouts',workoutRoutes)
 app.use('/api/user',userRoutes)
 //connect to db
